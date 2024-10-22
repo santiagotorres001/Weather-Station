@@ -30,8 +30,26 @@ users_model = '''
     )
 '''
 
+sensors_model = '''
+    CREATE TABLE IF NOT EXISTS sensors
+    (
+        id INTEGER PRIMARY KEY,
+        name TEXT NOT NULL,
+        model TEXT NOT NULL,
+        description TEXT NOT NULL,
+        url_datasheet TEXT NULL,
+        url_image TEXT NULL,
+        status BOOLEAN DEFAUTL true,
+        created_at TIMESTAMP DEFAULT (datetime('now','localtime')),
+        update_at TIMESTAMP DEFAULT (datetime('now','localtime')),
+        deleted_at NULL
+    )
+'''
+
+
 #Execute Query
 cur.execute(users_model)
+cur.execute(sensors_model)
 
 #Close connection
 #con.close()
