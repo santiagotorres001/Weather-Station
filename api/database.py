@@ -22,7 +22,7 @@ users_model = '''
         username TEXT NOT NULL,
         email TEXT NOT NULL,
         password TEXT NOT NULL,
-        role TEXT NOT NULL,
+        role INTEGER NOT NULL DEFAULT 1,
         status BOOLEAN DEFAULT true,
         created_at TIMESTAMP DEFAULT (datetime('now','localtime')),
         update_at TIMESTAMP DEFAULT (datetime('now','localtime')),
@@ -34,4 +34,4 @@ users_model = '''
 cur.execute(users_model)
 
 #Close connection
-con.close()
+#con.close()
