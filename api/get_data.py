@@ -9,7 +9,7 @@ import serial
 import time
 
 #Arduino port
-arduino_port = "COM9"
+arduino_port = "COM10"
 arduino_bau = 9600
 
 service = serial.Serial(
@@ -27,7 +27,6 @@ while True:
     if data:
         print(data)
         #temp, hum = data.split(",")
-        
        # print(f"Temperature: {temp} °C")
         #print(f"Humidity: {hum} %")
 time.sleep(1)
