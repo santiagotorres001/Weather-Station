@@ -44,6 +44,6 @@ while True:
 #1. Crear una nuevo modelo de datos (tabla "test_data")
 #Campos necesarios: id, temp, hum, fecha de creacion
 #2. Crear un metodo para insertar datos en la tabla creada "test_data"
-#3. Update method: Los datos insertados detectan cambios en la temp y hum
+#3. Actualizar metodo (debe cumplir con, si detecta cambios inserta los datos): Los datos insertados detectan cambios en la temp y hum
 
 time.sleep(1)
