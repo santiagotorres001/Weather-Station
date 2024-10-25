@@ -12,6 +12,7 @@ from detect_arduino_port import p
 
 port = p
 
+
 def  get_arduino_port():
     ports = serial.tools.list_ports.comports()
     print(ports)
@@ -39,4 +40,10 @@ while True:
         temp, hum = data.split(",")
         print(f"Temperature: {temp} °C")
         print(f"Humidity: {hum} %")
+
+#1. Crear una nuevo modelo de datos (tabla "test_data")
+#Campos necesarios: id, temp, hum, fecha de creacion
+#2. Crear un metodo para insertar datos en la tabla creada "test_data"
+#3. Update method: Los datos insertados detectan cambios en la temp y hum
+
 time.sleep(1)
