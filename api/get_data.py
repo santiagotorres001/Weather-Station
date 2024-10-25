@@ -6,10 +6,20 @@ Developer: Santiago Torres
 '''
 #Import libraries
 import serial
+import serial.tools.list_ports
 import time
+from detect_arduino_port import p
+
+port = p
+
+def  get_arduino_port():
+    ports = serial.tools.list_ports.comports()
+    print(ports)
+    #Con estas lineas se trae los puertos de la PC
+
 
 #Arduino port
-arduino_port = "COM10"
+arduino_port = port
 arduino_bau = 9600
 
 service = serial.Serial(
