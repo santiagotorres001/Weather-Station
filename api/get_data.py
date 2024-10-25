@@ -25,8 +25,8 @@ while True:
     data = service.readline().decode('utf-8').rstrip()
     
     if data:
-        print(data)
-        #temp, hum = data.split(",")
-       # print(f"Temperature: {temp} °C")
-        #print(f"Humidity: {hum} %")
+        #print(data)
+        temp, hum = data.split(",")
+        print(f"Temperature: {temp} °C")
+        print(f"Humidity: {hum} %")
 time.sleep(1)
