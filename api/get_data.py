@@ -41,9 +41,13 @@ while True:
         print(f"Temperature: {temp} °C")
         print(f"Humidity: {hum} %")
 
+#Aqui el INSERT INTO        
+
 #1. Crear una nuevo modelo de datos (tabla "test_data")
 #Campos necesarios: id, temp, hum, fecha de creacion
 #2. Crear un metodo para insertar datos en la tabla creada "test_data"
 #3. Actualizar metodo (debe cumplir con, si detecta cambios inserta los datos): Los datos insertados detectan cambios en la temp y hum
+#4. Crear un menu de opciones que se llame List sensor data
+#5. Crear un menu de opciones que permita graficar con Matplotlib
 
 time.sleep(1)
