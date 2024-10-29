@@ -24,7 +24,7 @@ Werkzeug==3.0.4
 '''
 
 
-
+import hashlib  # Esta libreria permite encriptar las contraseñas, ya esta incluida en Python
 from supabase import create_client, Client # type: ignore
 
 #Supabase data connection:URL, KEY
@@ -37,7 +37,11 @@ supabase: Client = create_client(SUPABASE_URL,SUPABASE_KEY)
 #Get data function
 def save_data(e,p):
     #Insert into users model
-    response = supabase.table('users').insert({"email":e,"password":p}).execute()
+    
+    #Con esta linea se encripta la contraseña
+    enc_pass = hashlib.sha256(p.encode()).hexdigest()
+    
+    response = supabase.table('users').insert({"email":e,"password":enc_pass}).execute()
     
     if response.data:
         print(f"User has been save successfully: {response.data}")
